@@ -1,17 +1,35 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
 
-function Greeting() {
+function CardList() {
   return (
-    <>
-      <h1>Hey How are you? I hope you are </h1>
-      <input type="text" placeholder="Enter your text"/>
-      <button className="btn">Click me</button>
-    </>
+    <main className="card-list">
+      <Card/>
+      <Card/>
+      <Card/>
+      <Card/>
+
+    </main>
   );
 }
+const title="Card Title";
+function Card(){
+  return (
+    <div className="card">
+      <img src="https://th.bing.com/th/id/OIP.qYjxUSvCp5Hy5iJxs4crOwAAAA?w=324&h=324&rs=1&pid=ImgDetMain" alt="cart-image"/>
+      <h1>{title}</h1>
+      <Description/>
+    </div>
+  )
 
-ReactDOM.createRoot(document.getElementById("root")).render(<Greeting />);
+}
+
+function Description(){
+return <p style={{marginTop:"10px"}}>Loremaloremlorem</p>
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<CardList />);
 
 //return single element
 //div/section/article/Fragment/use
